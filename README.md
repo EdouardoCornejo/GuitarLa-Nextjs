@@ -69,11 +69,17 @@ npm install
 
 ### Variables de entorno
 
-Crea un archivo `.env` en la raíz con la URL base del backend (sin `/api` ni barra final):
+Copia la plantilla `.env.example` a `.env` en la raíz y ajusta la URL base del backend (sin `/api` ni barra final):
+
+```bash
+cp .env.example .env
+```
 
 ```env
 API_URL=http://localhost:1337
 ```
+
+El archivo `.env` está en `.gitignore`. La variable no lleva el prefijo `NEXT_PUBLIC_` porque solo se usa en el servidor, así que no llega al navegador.
 
 | Variable  | Uso                                                                                 |
 | --------- | ----------------------------------------------------------------------------------- |
@@ -206,6 +212,7 @@ GuitarLa-Nextjs/
 │   └── *.module.css             # blog, carrito, curso, footer, grid, guitarras, header, nosotros
 ├── utils/
 │   └── helpers.js               # formatearFecha
+├── .env.example                 # Plantilla de API_URL
 ├── next.config.js
 └── package.json
 ```
