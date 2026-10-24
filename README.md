@@ -147,7 +147,7 @@ Abre `http://localhost:3000`.
 
 ### 4. `pages/_document.js` y estilos
 
-- Carga la fuente **Outfit** de Google Fonts y **normalize.css**, y define la meta descripción global.
+- Fija `lang="es"`, carga la fuente **Outfit** de Google Fonts y **normalize.css**, y define la meta descripción global, el `theme-color`, el favicon (SVG + ICO) y el `apple-touch-icon`.
 - `styles/globals.css` define variables (`--primary: #e99401`, `--black`, `--white`, `--fuente-principal`) y clases globales (`contenedor`, `heading`…); cada sección tiene su **CSS Module** (`guitarras.module.css`, `blog.module.css`, `carrito.module.css`, etc.).
 
 ### Flujo de la app
@@ -193,7 +193,7 @@ GuitarLa-Nextjs/
 │   └── post.js                  # Tarjeta de post
 ├── pages/
 │   ├── _app.js                  # Estado global del carrito
-│   ├── _document.js             # Fuentes, normalize.css
+│   ├── _document.js             # lang, favicon, fuentes, normalize.css
 │   ├── 404.js
 │   ├── index.js                 # Inicio (SSG)
 │   ├── tienda.js                # Tienda (SSR)
@@ -205,7 +205,9 @@ GuitarLa-Nextjs/
 │   └── guitarras/
 │       └── [url].js             # Detalle de guitarra (SSG)
 ├── public/
+│   ├── favicon.svg              # Favicon (+ favicon.ico de respaldo)
 │   ├── favicon.ico
+│   ├── apple-touch-icon.png     # Icono de inicio en iOS
 │   └── img/                     # logo.svg, header.jpg, nosotros.jpg, carrito.png
 ├── styles/
 │   ├── globals.css

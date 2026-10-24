@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Head from 'next/head'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
@@ -57,7 +58,12 @@ function MyApp({ Component, pageProps }) {
       agregarCarrito={agregarCarrito}
       eliminarProducto={eliminarProducto}
       actualizarCantidad={actualizarCantidad}
-    /> : null
+    /> : (
+      // Título del HTML prerenderizado; cada página lo reemplaza al montarse
+      <Head>
+        <title>GuitarLA</title>
+      </Head>
+    )
   }
 
 export default MyApp
